@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip;
+namespace PhpZipv3;
 
 use PhpZipv3\Constants\UnixStat;
 use PhpZipv3\Constants\ZipCompressionLevel;
