@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Model;
+namespace PhpZipv3\Model;
 
-use PhpZip\Exception\ZipException;
+use PhpZipv3\Exception\ZipException;
 
 /**
  * Interface ZipData.

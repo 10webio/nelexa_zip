@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Constants;
+namespace PhpZipv3\Constants;
 
-use PhpZip\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\InvalidArgumentException;
 
 /**
  * Class ZipEncryptionMethod.

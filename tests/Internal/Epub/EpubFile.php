@@ -2,17 +2,17 @@
 
 /** @noinspection PhpComposerExtensionStubsInspection */
 
-namespace PhpZip\Tests\Internal\Epub;
+namespace PhpZipv3\Tests\Internal\Epub;
 
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
-use PhpZip\IO\ZipReader;
-use PhpZip\IO\ZipWriter;
-use PhpZip\Model\ImmutableZipContainer;
-use PhpZip\Model\ZipContainer;
-use PhpZip\Model\ZipEntry;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\IO\ZipReader;
+use PhpZipv3\IO\ZipWriter;
+use PhpZipv3\Model\ImmutableZipContainer;
+use PhpZipv3\Model\ZipContainer;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\ZipFile;
 
 /**
  * Class EpubFile.

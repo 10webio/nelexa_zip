@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Model\Data;
+namespace PhpZipv3\Model\Data;
 
-use PhpZip\Model\ZipData;
-use PhpZip\Model\ZipEntry;
-use PhpZip\ZipFile;
+use PhpZipv3\Model\ZipData;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\ZipFile;
 
 /**
  * The class contains a streaming resource with new content added to the ZIP archive.

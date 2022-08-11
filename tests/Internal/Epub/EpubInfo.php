@@ -2,9 +2,9 @@
 
 /** @noinspection PhpComposerExtensionStubsInspection */
 
-namespace PhpZip\Tests\Internal\Epub;
+namespace PhpZipv3\Tests\Internal\Epub;
 
-use PhpZip\Exception\ZipException;
+use PhpZipv3\Exception\ZipException;
 
 /**
  * Class EpubInfo.

@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\Model\Extra\Fields\WinZipAesExtraField;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\Model\Extra\Fields\WinZipAesExtraField;
 
 /**
  * @internal

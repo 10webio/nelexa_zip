@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Util;
+namespace PhpZipv3\Util;
 
 /**
  * String Util.

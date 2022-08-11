@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Model\Extra\Fields;
+namespace PhpZipv3\Model\Extra\Fields;
 
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Simple placeholder for all those extra fields we don't want to deal with.

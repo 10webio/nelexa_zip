@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\Fields\Zip64ExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\Fields\Zip64ExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * @internal

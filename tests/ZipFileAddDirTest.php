@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Exception\ZipException;
-use PhpZip\Util\Iterator\IgnoreFilesFilterIterator;
-use PhpZip\Util\Iterator\IgnoreFilesRecursiveFilterIterator;
-use PhpZip\ZipFile;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Util\Iterator\IgnoreFilesFilterIterator;
+use PhpZipv3\Util\Iterator\IgnoreFilesRecursiveFilterIterator;
+use PhpZipv3\ZipFile;
 
 /**
  * Test add directory to zip archive.

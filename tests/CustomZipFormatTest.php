@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\Fields\NewUnixExtraField;
-use PhpZip\Model\Extra\Fields\NtfsExtraField;
-use PhpZip\Tests\Internal\CustomZip\ZipFileCustomWriter;
-use PhpZip\Tests\Internal\CustomZip\ZipFileWithBeforeSave;
-use PhpZip\Tests\Internal\Epub\EpubFile;
-use PhpZip\ZipFile;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\Fields\NewUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\NtfsExtraField;
+use PhpZipv3\Tests\Internal\CustomZip\ZipFileCustomWriter;
+use PhpZipv3\Tests\Internal\CustomZip\ZipFileWithBeforeSave;
+use PhpZipv3\Tests\Internal\Epub\EpubFile;
+use PhpZipv3\ZipFile;
 
 /**
  * Checks the ability to create own file-type class, reader, writer and container.

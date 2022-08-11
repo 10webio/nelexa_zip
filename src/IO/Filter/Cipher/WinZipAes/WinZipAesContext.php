@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\IO\Filter\Cipher\WinZipAes;
+namespace PhpZipv3\IO\Filter\Cipher\WinZipAes;
 
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Exception\ZipAuthenticationException;
-use PhpZip\Util\CryptoUtil;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Exception\ZipAuthenticationException;
+use PhpZipv3\Util\CryptoUtil;
 
 /**
  * WinZip Aes Encryption.

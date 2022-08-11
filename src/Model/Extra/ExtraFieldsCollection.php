@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Model\Extra;
+namespace PhpZipv3\Model\Extra;
 
 /**
  * Represents a collection of Extra Fields as they may

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Model\Extra\Fields;
+namespace PhpZipv3\Model\Extra\Fields;
 
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Apk Alignment Extra Field.

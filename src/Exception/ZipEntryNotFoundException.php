@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Exception;
+namespace PhpZipv3\Exception;
 
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Thrown if entry not found.

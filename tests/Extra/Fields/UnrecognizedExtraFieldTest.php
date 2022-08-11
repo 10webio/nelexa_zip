@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Model\Extra\Fields\UnrecognizedExtraField;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Model\Extra\Fields\UnrecognizedExtraField;
 
 /**
  * Class UnrecognizedExtraFieldTest.

@@ -2,11 +2,11 @@
 
 /** @noinspection PhpUndefinedMethodInspection */
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\Fields\AbstractUnicodeExtraField;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\Fields\AbstractUnicodeExtraField;
 
 /**
  * Class AbstractUnicodeExtraFieldTest.
@@ -16,7 +16,7 @@ abstract class AbstractUnicodeExtraFieldTest extends TestCase
     /**
      * @return string|AbstractUnicodeExtraField
      *
-     * @psalm-var class-string<\PhpZip\Model\Extra\Fields\AbstractUnicodeExtraField>
+     * @psalm-var class-string<\PhpZipv3\Model\Extra\Fields\AbstractUnicodeExtraField>
      */
     abstract protected function getUnicodeExtraFieldClassName();
 

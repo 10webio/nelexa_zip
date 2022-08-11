@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpZip\Tests\SlowTests;
+namespace PhpZipv3\Tests\SlowTests;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Exception\ZipException;
-use PhpZip\Tests\ZipTestCase;
-use PhpZip\Util\FilesUtil;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Tests\ZipTestCase;
+use PhpZipv3\Util\FilesUtil;
+use PhpZipv3\ZipFile;
 
 /**
  * @internal

@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\IO\Filter\Cipher\WinZipAes;
+namespace PhpZipv3\IO\Filter\Cipher\WinZipAes;
 
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Exception\ZipAuthenticationException;
-use PhpZip\Model\Extra\Fields\WinZipAesExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Exception\ZipAuthenticationException;
+use PhpZipv3\Model\Extra\Fields\WinZipAesExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Decrypt WinZip AES stream.

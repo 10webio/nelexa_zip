@@ -1,25 +1,25 @@
 <?php
 
-namespace PhpZip\IO;
+namespace PhpZipv3\IO;
 
-use PhpZip\Constants\DosCodePage;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Constants\ZipVersion;
-use PhpZip\Exception\ZipException;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\IO\Filter\Cipher\Pkware\PKEncryptionStreamFilter;
-use PhpZip\IO\Filter\Cipher\WinZipAes\WinZipAesEncryptionStreamFilter;
-use PhpZip\Model\Data\ZipSourceFileData;
-use PhpZip\Model\Extra\Fields\ApkAlignmentExtraField;
-use PhpZip\Model\Extra\Fields\WinZipAesExtraField;
-use PhpZip\Model\Extra\Fields\Zip64ExtraField;
-use PhpZip\Model\ZipContainer;
-use PhpZip\Model\ZipEntry;
-use PhpZip\Util\PackUtil;
-use PhpZip\Util\StringUtil;
+use PhpZipv3\Constants\DosCodePage;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Constants\ZipVersion;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\IO\Filter\Cipher\Pkware\PKEncryptionStreamFilter;
+use PhpZipv3\IO\Filter\Cipher\WinZipAes\WinZipAesEncryptionStreamFilter;
+use PhpZipv3\Model\Data\ZipSourceFileData;
+use PhpZipv3\Model\Extra\Fields\ApkAlignmentExtraField;
+use PhpZipv3\Model\Extra\Fields\WinZipAesExtraField;
+use PhpZipv3\Model\Extra\Fields\Zip64ExtraField;
+use PhpZipv3\Model\ZipContainer;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\Util\PackUtil;
+use PhpZipv3\Util\StringUtil;
 
 /**
  * Class ZipWriter.

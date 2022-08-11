@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipOptions;
-use PhpZip\Exception\ZipException;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipOptions;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\ZipFile;
 use Symfony\Component\Finder\Finder;
 
 /**

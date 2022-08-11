@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Constants\ZipOptions;
-use PhpZip\Util\FilesUtil;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipOptions;
+use PhpZipv3\Util\FilesUtil;
+use PhpZipv3\ZipFile;
 use Symfony\Component\Finder\Finder;
 
 /**

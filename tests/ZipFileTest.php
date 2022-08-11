@@ -1,20 +1,20 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
 use GuzzleHttp\Psr7\Response;
-use PhpZip\Constants\ZipCompressionLevel;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\Model\Data\ZipFileData;
-use PhpZip\Model\ZipEntry;
-use PhpZip\Model\ZipInfo;
-use PhpZip\Util\FilesUtil;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipCompressionLevel;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\Model\Data\ZipFileData;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\Model\ZipInfo;
+use PhpZipv3\Util\FilesUtil;
+use PhpZipv3\ZipFile;
 use Psr\Http\Message\ResponseInterface;
 
 /**

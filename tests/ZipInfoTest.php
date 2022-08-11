@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\ZipInfo;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\ZipInfo;
+use PhpZipv3\ZipFile;
 
 /**
  * Testing the {@see ZipInfo} class.

@@ -1,19 +1,19 @@
 <?php
 
-namespace PhpZip\Model\Extra;
+namespace PhpZipv3\Model\Extra;
 
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Model\Extra\Fields\ApkAlignmentExtraField;
-use PhpZip\Model\Extra\Fields\AsiExtraField;
-use PhpZip\Model\Extra\Fields\ExtendedTimestampExtraField;
-use PhpZip\Model\Extra\Fields\JarMarkerExtraField;
-use PhpZip\Model\Extra\Fields\NewUnixExtraField;
-use PhpZip\Model\Extra\Fields\NtfsExtraField;
-use PhpZip\Model\Extra\Fields\OldUnixExtraField;
-use PhpZip\Model\Extra\Fields\UnicodeCommentExtraField;
-use PhpZip\Model\Extra\Fields\UnicodePathExtraField;
-use PhpZip\Model\Extra\Fields\WinZipAesExtraField;
-use PhpZip\Model\Extra\Fields\Zip64ExtraField;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Model\Extra\Fields\ApkAlignmentExtraField;
+use PhpZipv3\Model\Extra\Fields\AsiExtraField;
+use PhpZipv3\Model\Extra\Fields\ExtendedTimestampExtraField;
+use PhpZipv3\Model\Extra\Fields\JarMarkerExtraField;
+use PhpZipv3\Model\Extra\Fields\NewUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\NtfsExtraField;
+use PhpZipv3\Model\Extra\Fields\OldUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\UnicodeCommentExtraField;
+use PhpZipv3\Model\Extra\Fields\UnicodePathExtraField;
+use PhpZipv3\Model\Extra\Fields\WinZipAesExtraField;
+use PhpZipv3\Model\Extra\Fields\Zip64ExtraField;
 
 /**
  * Class ZipExtraManager.
@@ -22,7 +22,7 @@ final class ZipExtraDriver
 {
     /**
      * @var array<int, string>
-     * @psalm-var array<int, class-string<\PhpZip\Model\Extra\ZipExtraField>>
+     * @psalm-var array<int, class-string<\PhpZipv3\Model\Extra\ZipExtraField>>
      */
     private static $implementations = [
         ApkAlignmentExtraField::HEADER_ID => ApkAlignmentExtraField::class,

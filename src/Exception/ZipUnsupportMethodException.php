@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Exception;
+namespace PhpZipv3\Exception;
 
 /**
  * Class ZipUnsupportMethodException.

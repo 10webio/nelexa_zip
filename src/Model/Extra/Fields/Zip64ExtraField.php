@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpZip\Model\Extra\Fields;
+namespace PhpZipv3\Model\Extra\Fields;
 
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Model\ZipEntry;
-use PhpZip\Util\PackUtil;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\Util\PackUtil;
 
 /**
  * ZIP64 Extra Field.

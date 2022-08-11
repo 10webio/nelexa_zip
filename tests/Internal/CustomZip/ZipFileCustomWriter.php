@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Tests\Internal\CustomZip;
+namespace PhpZipv3\Tests\Internal\CustomZip;
 
-use PhpZip\IO\ZipWriter;
-use PhpZip\ZipFile;
+use PhpZipv3\IO\ZipWriter;
+use PhpZipv3\ZipFile;
 
 /**
  * Class ZipFileCustomWriter.

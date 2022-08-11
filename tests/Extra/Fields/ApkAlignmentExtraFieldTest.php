@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\Fields\ApkAlignmentExtraField;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\Fields\ApkAlignmentExtraField;
 
 /**
  * @internal

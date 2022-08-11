@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Util\StringUtil;
-use PhpZip\ZipFile;
+use PhpZipv3\Util\StringUtil;
+use PhpZipv3\ZipFile;
 
 /**
  * Class ZipFileSetTestCase.

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Constants;
+namespace PhpZipv3\Constants;
 
-use PhpZip\Exception\ZipUnsupportMethodException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
 
 /**
  * Class ZipCompressionMethod.

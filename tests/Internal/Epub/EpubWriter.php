@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpZip\Tests\Internal\Epub;
+namespace PhpZipv3\Tests\Internal\Epub;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\IO\ZipWriter;
-use PhpZip\Model\Data\ZipNewData;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\IO\ZipWriter;
+use PhpZipv3\Model\Data\ZipNewData;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Class EpubWriter.

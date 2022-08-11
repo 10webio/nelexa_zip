@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpZip\Model\Extra\Fields;
+namespace PhpZipv3\Model\Extra\Fields;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * WinZip AES Extra Field.

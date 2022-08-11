@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Util;
+namespace PhpZipv3\Util;
 
 /**
  * Convert unix timestamp values to DOS date/time values and vice versa.

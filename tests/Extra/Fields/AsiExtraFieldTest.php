@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Exception\Crc32Exception;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\Extra\Fields\AsiExtraField;
+use PhpZipv3\Exception\Crc32Exception;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\Extra\Fields\AsiExtraField;
 
 /**
  * @internal

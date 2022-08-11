@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Model\Extra\Fields;
+namespace PhpZipv3\Model\Extra\Fields;
 
 /**
  * Info-ZIP Unicode Comment Extra Field (0x6375):.

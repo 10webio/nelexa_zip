@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Util\Iterator;
+namespace PhpZipv3\Util\Iterator;
 
-use PhpZip\Util\StringUtil;
+use PhpZipv3\Util\StringUtil;
 
 /**
  * Iterator for ignore files.

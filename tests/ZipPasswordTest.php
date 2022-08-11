@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Exception\ZipAuthenticationException;
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\ZipInfo;
-use PhpZip\ZipFile;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Exception\ZipAuthenticationException;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\ZipInfo;
+use PhpZipv3\ZipFile;
 
 /**
  * Tests with zip password.

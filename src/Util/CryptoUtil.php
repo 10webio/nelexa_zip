@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Util;
+namespace PhpZipv3\Util;
 
-use PhpZip\Exception\RuntimeException;
+use PhpZipv3\Exception\RuntimeException;
 
 /**
  * Crypto Utils.

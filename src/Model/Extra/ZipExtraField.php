@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Model\Extra;
+namespace PhpZipv3\Model\Extra;
 
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Extra Field in a Local or Central Header of a ZIP archive.

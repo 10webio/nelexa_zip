@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\IO\Stream;
+namespace PhpZipv3\IO\Stream;
 
 use Psr\Http\Message\StreamInterface;
 

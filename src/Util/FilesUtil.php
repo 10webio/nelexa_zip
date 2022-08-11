@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Util;
+namespace PhpZipv3\Util;
 
-use PhpZip\Util\Iterator\IgnoreFilesFilterIterator;
-use PhpZip\Util\Iterator\IgnoreFilesRecursiveFilterIterator;
+use PhpZipv3\Util\Iterator\IgnoreFilesFilterIterator;
+use PhpZipv3\Util\Iterator\IgnoreFilesRecursiveFilterIterator;
 
 /**
  * Files util.

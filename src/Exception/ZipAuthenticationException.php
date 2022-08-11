@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Exception;
+namespace PhpZipv3\Exception;
 
 /**
  * Thrown to indicate that an authenticated ZIP entry has been tampered with.

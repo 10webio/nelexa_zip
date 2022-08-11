@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Model;
+namespace PhpZipv3\Model;
 
 /**
  * @author Ne-Lexa alexey@nelexa.ru

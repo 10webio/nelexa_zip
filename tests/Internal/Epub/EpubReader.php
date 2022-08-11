@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Tests\Internal\Epub;
+namespace PhpZipv3\Tests\Internal\Epub;
 
-use PhpZip\IO\ZipReader;
+use PhpZipv3\IO\ZipReader;
 
 /**
  * Class EpubReader.

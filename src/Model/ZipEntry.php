@@ -2,31 +2,31 @@
 
 /** @noinspection PhpUsageOfSilenceOperatorInspection */
 
-namespace PhpZip\Model;
+namespace PhpZipv3\Model;
 
-use PhpZip\Constants\DosAttrs;
-use PhpZip\Constants\DosCodePage;
-use PhpZip\Constants\GeneralPurposeBitFlag;
-use PhpZip\Constants\UnixStat;
-use PhpZip\Constants\ZipCompressionLevel;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Constants\ZipVersion;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\Model\Extra\ExtraFieldsCollection;
-use PhpZip\Model\Extra\Fields\AsiExtraField;
-use PhpZip\Model\Extra\Fields\ExtendedTimestampExtraField;
-use PhpZip\Model\Extra\Fields\NtfsExtraField;
-use PhpZip\Model\Extra\Fields\OldUnixExtraField;
-use PhpZip\Model\Extra\Fields\UnicodePathExtraField;
-use PhpZip\Model\Extra\Fields\WinZipAesExtraField;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Util\DateTimeConverter;
-use PhpZip\Util\StringUtil;
+use PhpZipv3\Constants\DosAttrs;
+use PhpZipv3\Constants\DosCodePage;
+use PhpZipv3\Constants\GeneralPurposeBitFlag;
+use PhpZipv3\Constants\UnixStat;
+use PhpZipv3\Constants\ZipCompressionLevel;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Constants\ZipVersion;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\Model\Extra\ExtraFieldsCollection;
+use PhpZipv3\Model\Extra\Fields\AsiExtraField;
+use PhpZipv3\Model\Extra\Fields\ExtendedTimestampExtraField;
+use PhpZipv3\Model\Extra\Fields\NtfsExtraField;
+use PhpZipv3\Model\Extra\Fields\OldUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\UnicodePathExtraField;
+use PhpZipv3\Model\Extra\Fields\WinZipAesExtraField;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Util\DateTimeConverter;
+use PhpZipv3\Util\StringUtil;
 
 /**
  * ZIP file entry.

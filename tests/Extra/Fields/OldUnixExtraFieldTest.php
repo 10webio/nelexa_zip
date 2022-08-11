@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Model\Extra\Fields\OldUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\OldUnixExtraField;
 
 /**
  * Class OldUnixExtraFieldTest.

@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Model\Extra\Fields;
+namespace PhpZipv3\Model\Extra\Fields;
 
-use PhpZip\Constants\UnixStat;
-use PhpZip\Exception\Crc32Exception;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Constants\UnixStat;
+use PhpZipv3\Exception\Crc32Exception;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * ASi Unix Extra Field:

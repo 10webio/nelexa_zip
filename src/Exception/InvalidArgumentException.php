@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Exception;
+namespace PhpZipv3\Exception;
 
 /**
  * Thrown to indicate that a method has been passed an illegal or

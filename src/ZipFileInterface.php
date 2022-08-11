@@ -2,14 +2,14 @@
 
 namespace PhpZip;
 
-use PhpZip\Constants\ZipCompressionLevel;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\ZipEntry;
-use PhpZip\Model\ZipEntryMatcher;
-use PhpZip\Model\ZipInfo;
+use PhpZipv3\Constants\ZipCompressionLevel;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\Model\ZipEntryMatcher;
+use PhpZipv3\Model\ZipInfo;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Finder\Finder;
 

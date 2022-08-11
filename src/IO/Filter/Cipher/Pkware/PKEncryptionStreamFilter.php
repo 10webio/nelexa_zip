@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\IO\Filter\Cipher\Pkware;
+namespace PhpZipv3\IO\Filter\Cipher\Pkware;
 
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Encryption PKWARE Traditional Encryption.

@@ -1,30 +1,30 @@
 <?php
 
-namespace PhpZip\IO;
+namespace PhpZipv3\IO;
 
-use PhpZip\Constants\DosCodePage;
-use PhpZip\Constants\GeneralPurposeBitFlag;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Constants\ZipOptions;
-use PhpZip\Exception\Crc32Exception;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\ZipException;
-use PhpZip\IO\Filter\Cipher\Pkware\PKDecryptionStreamFilter;
-use PhpZip\IO\Filter\Cipher\WinZipAes\WinZipAesDecryptionStreamFilter;
-use PhpZip\Model\Data\ZipSourceFileData;
-use PhpZip\Model\EndOfCentralDirectory;
-use PhpZip\Model\Extra\ExtraFieldsCollection;
-use PhpZip\Model\Extra\Fields\UnicodePathExtraField;
-use PhpZip\Model\Extra\Fields\UnrecognizedExtraField;
-use PhpZip\Model\Extra\Fields\WinZipAesExtraField;
-use PhpZip\Model\Extra\Fields\Zip64ExtraField;
-use PhpZip\Model\Extra\ZipExtraDriver;
-use PhpZip\Model\Extra\ZipExtraField;
-use PhpZip\Model\ImmutableZipContainer;
-use PhpZip\Model\ZipEntry;
-use PhpZip\Util\PackUtil;
+use PhpZipv3\Constants\DosCodePage;
+use PhpZipv3\Constants\GeneralPurposeBitFlag;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Constants\ZipOptions;
+use PhpZipv3\Exception\Crc32Exception;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\IO\Filter\Cipher\Pkware\PKDecryptionStreamFilter;
+use PhpZipv3\IO\Filter\Cipher\WinZipAes\WinZipAesDecryptionStreamFilter;
+use PhpZipv3\Model\Data\ZipSourceFileData;
+use PhpZipv3\Model\EndOfCentralDirectory;
+use PhpZipv3\Model\Extra\ExtraFieldsCollection;
+use PhpZipv3\Model\Extra\Fields\UnicodePathExtraField;
+use PhpZipv3\Model\Extra\Fields\UnrecognizedExtraField;
+use PhpZipv3\Model\Extra\Fields\WinZipAesExtraField;
+use PhpZipv3\Model\Extra\Fields\Zip64ExtraField;
+use PhpZipv3\Model\Extra\ZipExtraDriver;
+use PhpZipv3\Model\Extra\ZipExtraField;
+use PhpZipv3\Model\ImmutableZipContainer;
+use PhpZipv3\Model\ZipEntry;
+use PhpZipv3\Util\PackUtil;
 
 /**
  * Zip reader.

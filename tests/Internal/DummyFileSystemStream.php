@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Tests\Internal;
+namespace PhpZipv3\Tests\Internal;
 
 /**
  * Try to load using dummy stream.

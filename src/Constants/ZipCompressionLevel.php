@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Constants;
+namespace PhpZipv3\Constants;
 
 /**
  * Compression levels for Deflate and BZIP2.

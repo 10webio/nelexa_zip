@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Model;
+namespace PhpZipv3\Model;
 
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Exception\ZipException;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Exception\ZipException;
 
 /**
  * Class ZipContainer.

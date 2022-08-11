@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpZip\Exception;
+namespace PhpZipv3\Exception;
 
 /**
  * Thrown to indicate a CRC32 mismatch between the declared value in the

@@ -19,7 +19,7 @@ Table of contents
 - [Examples](#Examples)
 - [Glossary](#Glossary)
 - [Documentation](#Documentation)
-  + [Overview of methods of the class `\PhpZip\ZipFile`](#Documentation-Overview)
+  + [Overview of methods of the class `\PhpZipv3\ZipFile`](#Documentation-Overview)
   + [Creation/Opening of ZIP-archive](#Documentation-Open-Zip-Archive)
   + [Reading entries from the archive](#Documentation-Open-Zip-Entries)
   + [Iterating entries](#Documentation-Zip-Iterate)
@@ -78,7 +78,7 @@ Latest stable version: [![Latest Stable Version](https://poser.pugx.org/nelexa/z
 ### <a name="Examples"></a> Examples
 ```php
 // create new archive
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 try{
     $zipFile
         ->addFromString('zip/entry/filename', 'Is file content') // add an entry from the string
@@ -96,7 +96,7 @@ try{
         ->setPassword('password') // set password for all entries
         ->outputAsAttachment('library.jar'); // output to the browser without saving to a file
 }
-catch(\PhpZip\Exception\ZipException $e){
+catch(\PhpZipv3\Exception\ZipException $e){
     // handle exception
 }
 finally{
@@ -109,7 +109,7 @@ Other examples can be found in the `tests/` folder
 **Zip Entry** - file or folder in a ZIP-archive. Each entry in the archive has certain properties, for example: file name, compression method, encryption method, file size before compression, file size after compression, CRC32 and others.
 
 ### <a name="Documentation"></a> Documentation:
-#### <a name="Documentation-Overview"></a> Overview of methods of the class `\PhpZip\ZipFile`
+#### <a name="Documentation-Overview"></a> Overview of methods of the class `\PhpZipv3\ZipFile`
 - [ZipFile::__construct](#Documentation-ZipFile-__construct) - initializes the ZIP archive.
 - [ZipFile::addAll](#Documentation-ZipFile-addAll) - adds all entries from an array.
 - [ZipFile::addDir](#Documentation-ZipFile-addDir) - adds files to the archive from the directory on the specified path without subdirectories.
@@ -173,29 +173,29 @@ Other examples can be found in the `tests/` folder
 #### <a name="Documentation-Open-Zip-Archive"></a> Creation/Opening of ZIP-archive
 <a name="Documentation-ZipFile-__construct"></a>**ZipFile::__construct** - initializes the ZIP archive.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 ```
 <a name="Documentation-ZipFile-openFile"></a> **ZipFile::openFile** - opens a zip-archive from a file.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->openFile('file.zip');
 ```
 <a name="Documentation-ZipFile-openFromString"></a> **ZipFile::openFromString** - opens a zip-archive from a string.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->openFromString($stringContents);
 ```
 <a name="Documentation-ZipFile-openFromStream"></a> **ZipFile::openFromStream** - opens a zip-archive from the stream.
 ```php
 $stream = fopen('file.zip', 'rb');
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->openFromStream($stream);
 ```
 #### <a name="Documentation-Open-Zip-Entries"></a> Reading entries from the archive
 <a name="Documentation-ZipFile-count"></a> **ZipFile::count** - returns the number of entries in the archive.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 
 $count = count($zipFile);
 // or
@@ -203,7 +203,7 @@ $count = $zipFile->count();
 ```
 <a name="Documentation-ZipFile-getListFiles"></a> **ZipFile::getListFiles** - returns list of archive files.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $listFiles = $zipFile->getListFiles();
 
 // example array contents:
@@ -217,7 +217,7 @@ $listFiles = $zipFile->getListFiles();
 <a name="Documentation-ZipFile-getEntryContent"></a> **ZipFile::getEntryContent** - returns the entry contents using its name.
 ```php
 // $entryName = 'path/to/example-entry-name.txt';
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 
 $contents = $zipFile[$entryName];
 // or
@@ -226,7 +226,7 @@ $contents = $zipFile->getEntryContents($entryName);
 <a name="Documentation-ZipFile-hasEntry"></a> **ZipFile::hasEntry** - checks if there is an entry in the archive.
 ```php
 // $entryName = 'path/to/example-entry-name.txt';
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 
 $hasEntry = isset($zipFile[$entryName]);
 // or
@@ -235,14 +235,14 @@ $hasEntry = $zipFile->hasEntry($entryName);
 <a name="Documentation-ZipFile-isDirectory"></a> **ZipFile::isDirectory** - checks that the entry in the archive is a directory.
 ```php
 // $entryName = 'path/to/';
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 
 $isDirectory = $zipFile->isDirectory($entryName);
 ```
 <a name="Documentation-ZipFile-extractTo"></a> **ZipFile::extractTo** - extract the archive contents.
 The directory must exist.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->extractTo($directory);
 ```
 Extract some files to the directory.
@@ -254,7 +254,7 @@ $extractOnlyFiles = [
     'filename2', 
     'dir/dir/dir/'
 ];
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->extractTo($toDirectory, $extractOnlyFiles);
 ```
 #### <a name="Documentation-Zip-Iterate"></a> Iterating entries
@@ -285,17 +285,17 @@ while ($iterator->valid())
 #### <a name="Documentation-Zip-Info"></a> Getting information about entries
 <a name="Documentation-ZipFile-getArchiveComment"></a> **ZipFile::getArchiveComment** - returns the Zip archive comment.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $commentArchive = $zipFile->getArchiveComment();
 ```
 <a name="Documentation-ZipFile-getEntryComment"></a> **ZipFile::getEntryComment** - returns the comment of an entry using the entry name.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $commentEntry = $zipFile->getEntryComment($entryName);
 ```
 <a name="Documentation-ZipFile-getEntryInfo"></a> **ZipFile::getEntryInfo** - returns detailed information about the entry in the archive
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipInfo = $zipFile->getEntryInfo('file.txt');
 ```
 <a name="Documentation-ZipFile-getAllInfo"></a> **ZipFile::getAllInfo** - returns detailed information about all entries in the archive.
@@ -307,13 +307,13 @@ $zipAllInfo = $zipFile->getAllInfo();
 All methods of adding entries to a ZIP archive allow you to specify a method for compressing content.
 
 The following methods of compression are available:
-- `\PhpZip\Constants\ZipCompressionMethod::STORED` - no compression
-- `\PhpZip\Constants\ZipCompressionMethod::DEFLATED` - Deflate compression
-- `\PhpZip\Constants\ZipCompressionMethod::BZIP2` - Bzip2 compression with the extension `ext-bz2`
+- `\PhpZipv3\Constants\ZipCompressionMethod::STORED` - no compression
+- `\PhpZipv3\Constants\ZipCompressionMethod::DEFLATED` - Deflate compression
+- `\PhpZipv3\Constants\ZipCompressionMethod::BZIP2` - Bzip2 compression with the extension `ext-bz2`
 
 <a name="Documentation-ZipFile-addFile"></a> **ZipFile::addFile** - adds a file to a ZIP archive from the given path.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 // $file = '...../file.ext'; 
 // $entryName = 'file2.ext'
 $zipFile->addFile($file);
@@ -322,16 +322,16 @@ $zipFile->addFile($file);
 $zipFile->addFile($file, $entryName);
 
 // you can specify a compression method
-$zipFile->addFile($file, $entryName, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFile($file, $entryName, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFile($file, $entryName, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFile($file, $entryName, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFile($file, $entryName, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFile($file, $entryName, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addSplFile"></a>
 **ZipFile::addSplFile"** - adds a `\SplFileInfo` to a ZIP archive.
 ```php
 // $file = '...../file.ext'; 
 // $entryName = 'file2.ext'
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 
 $splFile = new \SplFileInfo('README.md');
 
@@ -342,7 +342,7 @@ $zipFile[$entryName] = new \SplFileInfo($file);
 
 // set compression method
 $zipFile->addSplFile($splFile, $entryName, $options = [
-    \PhpZip\Constants\ZipOptions::COMPRESSION_METHOD => \PhpZip\Constants\ZipCompressionMethod::DEFLATED,
+    \PhpZipv3\Constants\ZipOptions::COMPRESSION_METHOD => \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED,
 ]);
 ```
 <a name="Documentation-ZipFile-addFromFinder"></a>
@@ -357,28 +357,28 @@ $finder
     ->contains('/lorem\s+ipsum$/i')
     ->in('path');
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addFromFinder($finder, $options = [
-    \PhpZip\Constants\ZipOptions::COMPRESSION_METHOD => \PhpZip\Constants\ZipCompressionMethod::DEFLATED,
-    \PhpZip\Constants\ZipOptions::MODIFIED_TIME => new \DateTimeImmutable('-1 day 5 min')
+    \PhpZipv3\Constants\ZipOptions::COMPRESSION_METHOD => \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED,
+    \PhpZipv3\Constants\ZipOptions::MODIFIED_TIME => new \DateTimeImmutable('-1 day 5 min')
 ]);
 ```
 <a name="Documentation-ZipFile-addFromString"></a> **ZipFile::addFromString** - adds a file to a ZIP archive using its contents.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 
 $zipFile[$entryName] = $contents;
 // or
 $zipFile->addFromString($entryName, $contents);
 
 // you can specify a compression method
-$zipFile->addFromString($entryName, $contents, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFromString($entryName, $contents, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFromString($entryName, $contents, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFromString($entryName, $contents, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFromString($entryName, $contents, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFromString($entryName, $contents, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addFromStream"></a> **ZipFile::addFromStream** - adds a entry from the stream to the ZIP archive.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 // $stream = fopen(..., 'rb');
 
 $zipFile->addFromStream($stream, $entryName);
@@ -386,13 +386,13 @@ $zipFile->addFromStream($stream, $entryName);
 $zipFile[$entryName] = $stream;
 
 // you can specify a compression method
-$zipFile->addFromStream($stream, $entryName, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFromStream($stream, $entryName, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFromStream($stream, $entryName, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFromStream($stream, $entryName, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFromStream($stream, $entryName, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFromStream($stream, $entryName, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addEmptyDir"></a> **ZipFile::addEmptyDir** - add a new directory.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 // $path = "path/to/";
 $zipFile->addEmptyDir($path);
 // or
@@ -407,12 +407,12 @@ $entries = [
     'path/to/file.dat' => new \SplFileInfo('..../filename'), // add an entry from the file
 ];
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addAll($entries);
 ```
 <a name="Documentation-ZipFile-addDir"></a> **ZipFile::addDir** - adds files to the archive from the directory on the specified path without subdirectories.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addDir($dirName);
 
 // you can specify the path in the archive to which you want to put entries
@@ -420,13 +420,13 @@ $localPath = 'to/path/';
 $zipFile->addDir($dirName, $localPath);
 
 // you can specify a compression method
-$zipFile->addDir($dirName, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addDir($dirName, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addDir($dirName, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addDir($dirName, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addDir($dirName, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addDir($dirName, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addDirRecursive"></a> **ZipFile::addDirRecursive** - adds files to the archive from the directory on the specified path with subdirectories.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addDirRecursive($dirName);
 
 // you can specify the path in the archive to which you want to put entries
@@ -434,15 +434,15 @@ $localPath = 'to/path/';
 $zipFile->addDirRecursive($dirName, $localPath);
 
 // you can specify a compression method
-$zipFile->addDirRecursive($dirName, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addDirRecursive($dirName, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addDirRecursive($dirName, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addDirRecursive($dirName, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addDirRecursive($dirName, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addDirRecursive($dirName, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addFilesFromIterator"></a> **ZipFile::addFilesFromIterator** - adds files from the iterator of directories.
 ```php
 // $directoryIterator = new \DirectoryIterator($dir); // without subdirectories
 // $directoryIterator = new \RecursiveDirectoryIterator($dir); // with subdirectories
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addFilesFromIterator($directoryIterator);
 
 // you can specify the path in the archive to which you want to put entries
@@ -452,9 +452,9 @@ $zipFile->addFilesFromIterator($directoryIterator, $localPath);
 $zipFile[$localPath] = $directoryIterator;
 
 // you can specify a compression method
-$zipFile->addFilesFromIterator($directoryIterator, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFilesFromIterator($directoryIterator, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFilesFromIterator($directoryIterator, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFilesFromIterator($directoryIterator, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFilesFromIterator($directoryIterator, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFilesFromIterator($directoryIterator, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 Example with some files ignoring:
 ```php
@@ -465,10 +465,10 @@ $ignoreFiles = [
 
 // $directoryIterator = new \DirectoryIterator($dir); // without subdirectories
 // $directoryIterator = new \RecursiveDirectoryIterator($dir); // with subdirectories
-// use \PhpZip\Util\Iterator\IgnoreFilesFilterIterator for non-recursive search
+// use \PhpZipv3\Util\Iterator\IgnoreFilesFilterIterator for non-recursive search
  
-$zipFile = new \PhpZip\ZipFile();
-$ignoreIterator = new \PhpZip\Util\Iterator\IgnoreFilesRecursiveFilterIterator(
+$zipFile = new \PhpZipv3\ZipFile();
+$ignoreIterator = new \PhpZipv3\Util\Iterator\IgnoreFilesRecursiveFilterIterator(
     $directoryIterator, 
     $ignoreFiles
 );
@@ -479,7 +479,7 @@ $zipFile->addFilesFromIterator($ignoreIterator);
 ```php
 $globPattern = '**.{jpg,jpeg,png,gif}'; // example glob pattern -> add all .jpg, .jpeg, .png and .gif files
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addFilesFromGlob($dir, $globPattern);
 
 // you can specify the path in the archive to which you want to put entries
@@ -487,15 +487,15 @@ $localPath = 'to/path/';
 $zipFile->addFilesFromGlob($dir, $globPattern, $localPath);
 
 // you can specify a compression method
-$zipFile->addFilesFromGlob($dir, $globPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFilesFromGlob($dir, $globPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFilesFromGlob($dir, $globPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFilesFromGlob($dir, $globPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFilesFromGlob($dir, $globPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFilesFromGlob($dir, $globPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addFilesFromGlobRecursive"></a> **ZipFile::addFilesFromGlobRecursive** - adds files from a directory by [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)) with subdirectories.
 ```php
 $globPattern = '**.{jpg,jpeg,png,gif}'; // example glob pattern -> add all .jpg, .jpeg, .png and .gif files
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addFilesFromGlobRecursive($dir, $globPattern);
 
 // you can specify the path in the archive to which you want to put entries
@@ -503,15 +503,15 @@ $localPath = 'to/path/';
 $zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath);
 
 // you can specify a compression method
-$zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFilesFromGlobRecursive($dir, $globPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addFilesFromRegex"></a> **ZipFile::addFilesFromRegex** - adds files from a directory by [PCRE pattern](https://en.wikipedia.org/wiki/Regular_expression) without subdirectories.
 ```php
 $regexPattern = '/\.(jpe?g|png|gif)$/si'; // example regex pattern -> add all .jpg, .jpeg, .png and .gif files
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->addFilesFromRegex($dir, $regexPattern);
 
 // you can specify the path in the archive to which you want to put entries
@@ -519,9 +519,9 @@ $localPath = 'to/path/';
 $zipFile->addFilesFromRegex($dir, $regexPattern, $localPath);
 
 // you can specify a compression method
-$zipFile->addFilesFromRegex($dir, $regexPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFilesFromRegex($dir, $regexPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFilesFromRegex($dir, $regexPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFilesFromRegex($dir, $regexPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFilesFromRegex($dir, $regexPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFilesFromRegex($dir, $regexPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 <a name="Documentation-ZipFile-addFilesFromRegexRecursive"></a> **ZipFile::addFilesFromRegexRecursive** - adds files from a directory by [PCRE pattern](https://en.wikipedia.org/wiki/Regular_expression) with subdirectories.
 ```php
@@ -535,82 +535,82 @@ $localPath = 'to/path/';
 $zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath);
 
 // you can specify a compression method
-$zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::STORED); // No compression
-$zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
-$zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath, \PhpZip\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
+$zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::STORED); // No compression
+$zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED); // Deflate compression
+$zipFile->addFilesFromRegexRecursive($dir, $regexPattern, $localPath, \PhpZipv3\Constants\ZipCompressionMethod::BZIP2); // BZIP2 compression
 ```
 #### <a name="Documentation-Remove-Zip-Entries"></a> Deleting entries from the archive
 <a name="Documentation-ZipFile-deleteFromName"></a> **ZipFile::deleteFromName** - deletes an entry in the archive using its name.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->deleteFromName($entryName);
 ```
 <a name="Documentation-ZipFile-deleteFromGlob"></a> **ZipFile::deleteFromGlob** - deletes a entries in the archive using [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)).
 ```php
 $globPattern = '**.{jpg,jpeg,png,gif}'; // example glob pattern -> delete all .jpg, .jpeg, .png and .gif files
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->deleteFromGlob($globPattern);
 ```
 <a name="Documentation-ZipFile-deleteFromRegex"></a> **ZipFile::deleteFromRegex** - deletes a entries in the archive using [PCRE pattern](https://en.wikipedia.org/wiki/Regular_expression).
 ```php
 $regexPattern = '/\.(jpe?g|png|gif)$/si'; // example regex pattern -> delete all .jpg, .jpeg, .png and .gif files
 
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->deleteFromRegex($regexPattern);
 ```
 <a name="Documentation-ZipFile-deleteAll"></a> **ZipFile::deleteAll** - deletes all entries in the ZIP archive.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->deleteAll();
 ```
 #### <a name="Documentation-Entries"></a> Working with entries and archive
 <a name="Documentation-ZipFile-rename"></a> **ZipFile::rename** - renames an entry defined by its name.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->rename($oldName, $newName);
 ```
 <a name="Documentation-ZipFile-setCompressionLevel"></a> **ZipFile::setCompressionLevel** - set the compression level for all files in the archive.
 
 > _Note that this method does not apply to entries that are added after this method is run._
 
-By default, the compression level is 5 (`\PhpZip\Constants\ZipCompressionLevel::NORMAL`) or the compression level specified in the archive for Deflate compression.
+By default, the compression level is 5 (`\PhpZipv3\Constants\ZipCompressionLevel::NORMAL`) or the compression level specified in the archive for Deflate compression.
 
-The values range from 1 (`\PhpZip\Constants\ZipCompressionLevel::SUPER_FAST`) to 9 (`\PhpZip\Constants\ZipCompressionLevel::MAXIMUM`) are supported. The higher the number, the better and longer the compression.
+The values range from 1 (`\PhpZipv3\Constants\ZipCompressionLevel::SUPER_FAST`) to 9 (`\PhpZipv3\Constants\ZipCompressionLevel::MAXIMUM`) are supported. The higher the number, the better and longer the compression.
 ```php
-$zipFile = new \PhpZip\ZipFile();
-$zipFile->setCompressionLevel(\PhpZip\Constants\ZipCompressionLevel::MAXIMUM);
+$zipFile = new \PhpZipv3\ZipFile();
+$zipFile->setCompressionLevel(\PhpZipv3\Constants\ZipCompressionLevel::MAXIMUM);
 ```
 <a name="Documentation-ZipFile-setCompressionLevelEntry"></a> **ZipFile::setCompressionLevelEntry** - sets the compression level for the entry by its name.
 
-The values range from 1 (`\PhpZip\Constants\ZipCompressionLevel::SUPER_FAST`) to 9 (`\PhpZip\Constants\ZipCompressionLevel::MAXIMUM`) are supported. The higher the number, the better and longer the compression.
+The values range from 1 (`\PhpZipv3\Constants\ZipCompressionLevel::SUPER_FAST`) to 9 (`\PhpZipv3\Constants\ZipCompressionLevel::MAXIMUM`) are supported. The higher the number, the better and longer the compression.
 ```php
-$zipFile = new \PhpZip\ZipFile();
-$zipFile->setCompressionLevelEntry($entryName, \PhpZip\Constants\ZipCompressionLevel::FAST);
+$zipFile = new \PhpZipv3\ZipFile();
+$zipFile->setCompressionLevelEntry($entryName, \PhpZipv3\Constants\ZipCompressionLevel::FAST);
 ```
 <a name="Documentation-ZipFile-setCompressionMethodEntry"></a> **ZipFile::setCompressionMethodEntry** - sets the compression method for the entry by its name.
 
 The following compression methods are available:
-- `\PhpZip\Constants\ZipCompressionMethod::STORED` - No compression
-- `\PhpZip\Constants\ZipCompressionMethod::DEFLATED` - Deflate compression
-- `\PhpZip\Constants\ZipCompressionMethod::BZIP2` - Bzip2 compression with the extension `ext-bz2`
+- `\PhpZipv3\Constants\ZipCompressionMethod::STORED` - No compression
+- `\PhpZipv3\Constants\ZipCompressionMethod::DEFLATED` - Deflate compression
+- `\PhpZipv3\Constants\ZipCompressionMethod::BZIP2` - Bzip2 compression with the extension `ext-bz2`
 ```php
-$zipFile = new \PhpZip\ZipFile();
-$zipFile->setCompressionMethodEntry($entryName, \PhpZip\Constants\ZipCompressionMethod::DEFLATED);
+$zipFile = new \PhpZipv3\ZipFile();
+$zipFile->setCompressionMethodEntry($entryName, \PhpZipv3\Constants\ZipCompressionMethod::DEFLATED);
 ```
 <a name="Documentation-ZipFile-setArchiveComment"></a> **ZipFile::setArchiveComment** - set the comment of a ZIP archive.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->setArchiveComment($commentArchive);
 ```
 <a name="Documentation-ZipFile-setEntryComment"></a> **ZipFile::setEntryComment** - set the comment of an entry defined by its name.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $zipFile->setEntryComment($entryName, $comment);
 ```
 <a name="Documentation-ZipFile-matcher"></a> **ZipFile::matcher** - selecting entries in the archive to perform operations on them.
 ```php
-$zipFile = new \PhpZip\ZipFile();
+$zipFile = new \PhpZipv3\ZipFile();
 $matcher = $zipFile->matcher();
 ```
 Selecting files from the archive one at a time:
@@ -665,10 +665,10 @@ $matcher->disableEncryption(); // disables encryption for selected entries
 #### <a name="Documentation-Password"></a> Working with passwords
 
 Implemented support for encryption methods:
-- `\PhpZip\Constants\ZipEncryptionMethod::PKWARE` - Traditional PKWARE encryption (legacy)
-- `\PhpZip\Constants\ZipEncryptionMethod::WINZIP_AES_256` - WinZip AES encryption 256 bit (recommended)
-- `\PhpZip\Constants\ZipEncryptionMethod::WINZIP_AES_192` - WinZip AES encryption 192 bit
-- `\PhpZip\Constants\ZipEncryptionMethod::WINZIP_AES_128` - WinZip AES encryption 128 bit
+- `\PhpZipv3\Constants\ZipEncryptionMethod::PKWARE` - Traditional PKWARE encryption (legacy)
+- `\PhpZipv3\Constants\ZipEncryptionMethod::WINZIP_AES_256` - WinZip AES encryption 256 bit (recommended)
+- `\PhpZipv3\Constants\ZipEncryptionMethod::WINZIP_AES_192` - WinZip AES encryption 192 bit
+- `\PhpZipv3\Constants\ZipEncryptionMethod::WINZIP_AES_128` - WinZip AES encryption 128 bit
 
 <a name="Documentation-ZipFile-setReadPassword"></a> **ZipFile::setReadPassword** - set the password for the open archive.
 
@@ -688,7 +688,7 @@ $zipFile->setPassword($password);
 ```
 You can set the encryption method:
 ```php
-$encryptionMethod = \PhpZip\Constants\ZipEncryptionMethod::WINZIP_AES_256;
+$encryptionMethod = \PhpZipv3\Constants\ZipEncryptionMethod::WINZIP_AES_256;
 $zipFile->setPassword($password, $encryptionMethod);
 ```
 <a name="Documentation-ZipFile-setPasswordEntry"></a> **ZipFile::setPasswordEntry** - sets a new password of an entry defined by its name.
@@ -697,7 +697,7 @@ $zipFile->setPasswordEntry($entryName, $password);
 ```
 You can set the encryption method:
 ```php
-$encryptionMethod = \PhpZip\Constants\ZipEncryptionMethod::WINZIP_AES_256;
+$encryptionMethod = \PhpZipv3\Constants\ZipEncryptionMethod::WINZIP_AES_256;
 $zipFile->setPasswordEntry($entryName, $password, $encryptionMethod);
 ```
 <a name="Documentation-ZipFile-disableEncryption"></a> **ZipFile::disableEncryption** - disable encryption for all entries that are already in the archive.
@@ -807,14 +807,14 @@ composer update nelexa/zip
 ```
 Update your code to work with the new version:
 - Class `ZipOutputFile` merged to `ZipFile` and removed.
-  + `new \PhpZip\ZipOutputFile()` to `new \PhpZip\ZipFile()`
+  + `new \PhpZipv3\ZipOutputFile()` to `new \PhpZipv3\ZipFile()`
 - Static initialization methods are now not static.
-  + `\PhpZip\ZipFile::openFromFile($filename);` to `(new \PhpZip\ZipFile())->openFile($filename);`
-  + `\PhpZip\ZipOutputFile::openFromFile($filename);` to `(new \PhpZip\ZipFile())->openFile($filename);`
-  + `\PhpZip\ZipFile::openFromString($contents);` to `(new \PhpZip\ZipFile())->openFromString($contents);`
-  + `\PhpZip\ZipFile::openFromStream($stream);` to `(new \PhpZip\ZipFile())->openFromStream($stream);`
-  + `\PhpZip\ZipOutputFile::create()` to `new \PhpZip\ZipFile()`
-  + `\PhpZip\ZipOutputFile::openFromZipFile(\PhpZip\ZipFile $zipFile)` &gt; `(new \PhpZip\ZipFile())->openFile($filename);`
+  + `\PhpZipv3\ZipFile::openFromFile($filename);` to `(new \PhpZipv3\ZipFile())->openFile($filename);`
+  + `\PhpZipv3\ZipOutputFile::openFromFile($filename);` to `(new \PhpZipv3\ZipFile())->openFile($filename);`
+  + `\PhpZipv3\ZipFile::openFromString($contents);` to `(new \PhpZipv3\ZipFile())->openFromString($contents);`
+  + `\PhpZipv3\ZipFile::openFromStream($stream);` to `(new \PhpZipv3\ZipFile())->openFromStream($stream);`
+  + `\PhpZipv3\ZipOutputFile::create()` to `new \PhpZipv3\ZipFile()`
+  + `\PhpZipv3\ZipOutputFile::openFromZipFile(\PhpZipv3\ZipFile $zipFile)` &gt; `(new \PhpZipv3\ZipFile())->openFile($filename);`
 - Rename methods:
   + `addFromFile` to `addFile`
   + `setLevel` to `setCompressionLevel`

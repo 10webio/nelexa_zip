@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpZip\Model;
+namespace PhpZipv3\Model;
 
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Util\FileAttribUtil;
-use PhpZip\Util\FilesUtil;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Util\FileAttribUtil;
+use PhpZipv3\Util\FilesUtil;
 
 /**
  * Zip info.
@@ -146,7 +146,7 @@ class ZipInfo
     /**
      * @return string
      *
-     * @deprecated use \PhpZip\Model\ZipInfo::getMethodName()
+     * @deprecated use \PhpZipv3\Model\ZipInfo::getMethodName()
      */
     public function getMethod()
     {

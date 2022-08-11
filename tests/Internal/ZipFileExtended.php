@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Tests\Internal;
+namespace PhpZipv3\Tests\Internal;
 
-use PhpZip\ZipFile;
+use PhpZipv3\ZipFile;
 
 /**
  * Class ZipFileExtended.

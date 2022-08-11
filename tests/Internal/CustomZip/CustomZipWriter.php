@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Tests\Internal\CustomZip;
+namespace PhpZipv3\Tests\Internal\CustomZip;
 
-use PhpZip\IO\ZipWriter;
-use PhpZip\Model\Extra\Fields\NewUnixExtraField;
-use PhpZip\Model\Extra\Fields\NtfsExtraField;
-use PhpZip\Model\ZipContainer;
+use PhpZipv3\IO\ZipWriter;
+use PhpZipv3\Model\Extra\Fields\NewUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\NtfsExtraField;
+use PhpZipv3\Model\ZipContainer;
 
 /**
  * Class CustomZipWriter.

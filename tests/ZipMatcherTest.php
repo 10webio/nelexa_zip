@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Model\ZipEntryMatcher;
-use PhpZip\Model\ZipInfo;
-use PhpZip\ZipFile;
+use PhpZipv3\Model\ZipEntryMatcher;
+use PhpZipv3\Model\ZipInfo;
+use PhpZipv3\ZipFile;
 
 /**
  * @internal

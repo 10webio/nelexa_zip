@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpZip\Model\Data;
+namespace PhpZipv3\Model\Data;
 
-use PhpZip\Exception\Crc32Exception;
-use PhpZip\Exception\ZipException;
-use PhpZip\IO\ZipReader;
-use PhpZip\Model\ZipData;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Exception\Crc32Exception;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\IO\ZipReader;
+use PhpZipv3\Model\ZipData;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Class ZipFileData.

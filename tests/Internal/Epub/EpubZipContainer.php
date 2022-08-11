@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Tests\Internal\Epub;
+namespace PhpZipv3\Tests\Internal\Epub;
 
-use PhpZip\Exception\ZipEntryNotFoundException;
-use PhpZip\Model\ZipContainer;
+use PhpZipv3\Exception\ZipEntryNotFoundException;
+use PhpZipv3\Model\ZipContainer;
 
 /**
  * Class EpubZipContainer.

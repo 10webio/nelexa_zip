@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
-use PhpZip\Model\Extra\Fields\UnicodePathExtraField;
+use PhpZipv3\Model\Extra\Fields\UnicodePathExtraField;
 
 /**
  * Class UnicodePathExtraFieldTest.

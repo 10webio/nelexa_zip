@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
-use PhpZip\Exception\Crc32Exception;
-use PhpZip\Exception\RuntimeException;
-use PhpZip\Exception\ZipAuthenticationException;
-use PhpZip\Exception\ZipException;
-use PhpZip\ZipFile;
+use PhpZipv3\Exception\Crc32Exception;
+use PhpZipv3\Exception\RuntimeException;
+use PhpZipv3\Exception\ZipAuthenticationException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\ZipFile;
 
 /**
  * Some tests from the official extension of php-zip.

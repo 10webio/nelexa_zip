@@ -1,31 +1,31 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Constants\DosAttrs;
-use PhpZip\Constants\DosCodePage;
-use PhpZip\Constants\GeneralPurposeBitFlag;
-use PhpZip\Constants\ZipCompressionLevel;
-use PhpZip\Constants\ZipCompressionMethod;
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Constants\ZipEncryptionMethod;
-use PhpZip\Constants\ZipPlatform;
-use PhpZip\Constants\ZipVersion;
-use PhpZip\Exception\InvalidArgumentException;
-use PhpZip\Exception\ZipException;
-use PhpZip\Exception\ZipUnsupportMethodException;
-use PhpZip\Model\Data\ZipFileData;
-use PhpZip\Model\Data\ZipNewData;
-use PhpZip\Model\Extra\ExtraFieldsCollection;
-use PhpZip\Model\Extra\Fields\AsiExtraField;
-use PhpZip\Model\Extra\Fields\ExtendedTimestampExtraField;
-use PhpZip\Model\Extra\Fields\JarMarkerExtraField;
-use PhpZip\Model\Extra\Fields\NewUnixExtraField;
-use PhpZip\Model\Extra\Fields\NtfsExtraField;
-use PhpZip\Model\Extra\Fields\OldUnixExtraField;
-use PhpZip\Model\Extra\Fields\UnicodePathExtraField;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Constants\DosAttrs;
+use PhpZipv3\Constants\DosCodePage;
+use PhpZipv3\Constants\GeneralPurposeBitFlag;
+use PhpZipv3\Constants\ZipCompressionLevel;
+use PhpZipv3\Constants\ZipCompressionMethod;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Constants\ZipEncryptionMethod;
+use PhpZipv3\Constants\ZipPlatform;
+use PhpZipv3\Constants\ZipVersion;
+use PhpZipv3\Exception\InvalidArgumentException;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Exception\ZipUnsupportMethodException;
+use PhpZipv3\Model\Data\ZipFileData;
+use PhpZipv3\Model\Data\ZipNewData;
+use PhpZipv3\Model\Extra\ExtraFieldsCollection;
+use PhpZipv3\Model\Extra\Fields\AsiExtraField;
+use PhpZipv3\Model\Extra\Fields\ExtendedTimestampExtraField;
+use PhpZipv3\Model\Extra\Fields\JarMarkerExtraField;
+use PhpZipv3\Model\Extra\Fields\NewUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\NtfsExtraField;
+use PhpZipv3\Model\Extra\Fields\OldUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\UnicodePathExtraField;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * Class ZipEntryTest.

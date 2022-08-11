@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Util;
+namespace PhpZipv3\Util;
 
-use PhpZip\Constants\DosAttrs;
-use PhpZip\Constants\UnixStat;
+use PhpZipv3\Constants\DosAttrs;
+use PhpZipv3\Constants\UnixStat;
 
 /**
  * Class FileAttribUtil.

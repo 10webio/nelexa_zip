@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\IO\Stream;
+namespace PhpZipv3\IO\Stream;
 
-use PhpZip\Exception\ZipException;
-use PhpZip\Model\ZipEntry;
+use PhpZipv3\Exception\ZipException;
+use PhpZipv3\Model\ZipEntry;
 
 /**
  * The class provides stream reuse functionality.

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Tests;
+namespace PhpZipv3\Tests;
 
 use PHPUnit\Framework\TestCase;
-use PhpZip\Constants\ZipConstants;
-use PhpZip\Util\FilesUtil;
+use PhpZipv3\Constants\ZipConstants;
+use PhpZipv3\Util\FilesUtil;
 
 /**
  * PHPUnit test case and helper methods.

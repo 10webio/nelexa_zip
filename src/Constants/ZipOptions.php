@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpZip\Constants;
+namespace PhpZipv3\Constants;
 
-use PhpZip\IO\ZipReader;
-use PhpZip\ZipFile;
+use PhpZipv3\IO\ZipReader;
+use PhpZipv3\ZipFile;
 
 /**
  * Interface ZipOptions.

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpZip\Tests\Internal\CustomZip;
+namespace PhpZipv3\Tests\Internal\CustomZip;
 
-use PhpZip\Model\Extra\Fields\NewUnixExtraField;
-use PhpZip\Model\Extra\Fields\NtfsExtraField;
-use PhpZip\ZipFile;
+use PhpZipv3\Model\Extra\Fields\NewUnixExtraField;
+use PhpZipv3\Model\Extra\Fields\NtfsExtraField;
+use PhpZipv3\ZipFile;
 
 /**
  * Class ZipFileWithBeforeSave.

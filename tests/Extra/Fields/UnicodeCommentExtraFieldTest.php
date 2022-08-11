@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpZip\Tests\Extra\Fields;
+namespace PhpZipv3\Tests\Extra\Fields;
 
-use PhpZip\Model\Extra\Fields\UnicodeCommentExtraField;
+use PhpZipv3\Model\Extra\Fields\UnicodeCommentExtraField;
 
 /**
  * @internal
